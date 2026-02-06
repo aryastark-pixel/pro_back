@@ -25,7 +25,12 @@ SECRET_KEY = 'django-insecure-v4c)=1q12&mlgrxpepnd-h0$0pxk1%4c3be@uvjw3*zd53^&y*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['pro-back-flsb.onrender.com']
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    'pro-back-flsb.onrender.com',
+]
+
 CORS_ALLOW_CREDENTIALS = True
 
 
