@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
-
+import dj_database_url
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -78,6 +78,8 @@ WSGI_APPLICATION = 'pro_back.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -88,11 +90,13 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-
+DATABASES['default']= dj_database_url.parse("postgresql://pro_postgres_db_user:v5wBoPrj6BitZoqDCcXsLZD60laUbiKg@dpg-d62t88e3jp1c738tgfj0-a.oregon-postgres.render.com/pro_postgres_db")
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 CORS_ALLOW_ALL_ORIGINS = True
+
+
 
 AUTH_PASSWORD_VALIDATORS = [
     {
