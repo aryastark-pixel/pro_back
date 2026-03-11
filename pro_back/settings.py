@@ -95,7 +95,7 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-DATABASES['default']= dj_database_url.parse("postgresql://pro_postgres_db_user:v5wBoPrj6BitZoqDCcXsLZD60laUbiKg@dpg-d62t88e3jp1c738tgfj0-a.oregon-postgres.render.com/pro_postgres_db")
+# DATABASES['default']= dj_database_url.parse("postgresql://pro_postgres_db_user:v5wBoPrj6BitZoqDCcXsLZD60laUbiKg@dpg-d62t88e3jp1c738tgfj0-a.oregon-postgres.render.com/pro_postgres_db")
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators

@@ -19,12 +19,25 @@ class Citizen(models.Model):
         null=True,
         blank=True
     )
-
-    relation_name = models.CharField(
-        max_length=255,
+    relation_type = models.CharField(
+        max_length=10,
         null=True,
         blank=True
-    )  # Son/Daughter/Wife of
+    )  # S/O, D/O, W/O
+
+    # ⭐ relational link
+    relation_aadhaar = models.CharField(
+        max_length=12,
+        null=True,
+        blank=True
+    )
+
+    # This is the old field so it stays 
+    # relation_name = models.CharField(
+    #     max_length=255,
+    #     null=True,
+    #     blank=True
+    # )  # Son/Daughter/Wife of
 
     ward = models.CharField(
         max_length=100,
@@ -36,6 +49,11 @@ class Citizen(models.Model):
         max_length=100,
         null=True,
         blank=True
+    )
+    assembly_constituency = models.CharField(
+    max_length=150,
+    null=True,
+    blank=True
     )
 
     district = models.CharField(
@@ -55,13 +73,22 @@ class Citizen(models.Model):
         null=True,
         blank=True
     )
+    rc_no = models.CharField(
+    max_length=50,
+    null=True,
+    blank=True
+    )
 
     bank_number = models.CharField(
         max_length=50,
         null=True,
         blank=True
     )
-
+    bank_name = models.CharField(
+    max_length=150,
+    null=True,
+    blank=True
+    )
     contact_no = models.CharField(
         max_length=15,
         null=True,
@@ -79,13 +106,6 @@ class Citizen(models.Model):
         null=True,
         blank=True
     )
-
-    home_category = models.CharField(
-        max_length=100,
-        null=True,
-        blank=True
-    )
-
     professional_details = models.TextField(
         null=True,
         blank=True
@@ -94,6 +114,17 @@ class Citizen(models.Model):
     land_details = models.TextField(
         null=True,
         blank=True
+    )
+
+    home_category = models.CharField(
+        max_length=100,
+        null=True,
+        blank=True
+    )
+    home_photograph = models.ImageField(
+    upload_to="home_photos/",
+    null=True,
+    blank=True
     )
 
     schemes_applied = models.TextField(
