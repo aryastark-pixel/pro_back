@@ -29,6 +29,7 @@ ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
     'pro-back-flsb.onrender.com',
+    'pro-front-br23.onrender.com',
 ]
 
 CORS_ALLOW_CREDENTIALS = True
